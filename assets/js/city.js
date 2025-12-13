@@ -93,25 +93,24 @@ document.addEventListener('DOMContentLoaded', replaceCityName);
 // Handle broken images gracefully
 document.addEventListener('DOMContentLoaded', function() {
   const images = document.querySelectorAll('.hero-image img');
+  
+  function applyImageFallback(container) {
+    if (container) {
+      container.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+      container.style.opacity = '0.1';
+    }
+  }
+  
   images.forEach(img => {
     img.addEventListener('error', function() {
       this.style.display = 'none';
-      // Add a subtle background to the container instead
-      const container = this.closest('.hero-image');
-      if (container) {
-        container.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-        container.style.opacity = '0.08';
-      }
+      applyImageFallback(this.closest('.hero-image'));
     });
     
     // Also check if image has no src or empty file
     if (!img.src || img.complete && img.naturalHeight === 0) {
       img.style.display = 'none';
-      const container = img.closest('.hero-image');
-      if (container) {
-        container.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-        container.style.opacity = '0.08';
-      }
+      applyImageFallback(img.closest('.hero-image'));
     }
   });
 });

@@ -196,7 +196,7 @@ body {
 
 /* Hide broken images gracefully */
 .hero-image img[src=""],
-.hero-image img[src*=".jpg"]:not([src*="http"]) {
+.hero-image img:not([src*="http"]) {
   opacity: 0;
   width: 0;
   height: 0;
