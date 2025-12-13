@@ -10,6 +10,9 @@ body {
   line-height: 1.6;
   color: #333;
   background-color: #e9ecef;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Container with max width */
@@ -52,11 +55,11 @@ body {
 
 /* Hero section - adjusted for header */
 .hero {
-  min-height: calc(100vh - 70px); /* 70px = header height (15px top padding + 40px logo + 15px bottom padding) */
   display: flex;
   align-items: center;
   padding: 40px 0;
   background-color: #e9ecef;
+  flex: 1 0 auto;
 }
 
 /* Two-column layout */
@@ -213,6 +216,7 @@ footer {
   color: #ecf0f1;
   padding: 20px 0;
   text-align: center;
+  flex-shrink: 0;
 }
 
 footer .footer-links {
