@@ -52,7 +52,7 @@ body {
 
 /* Hero section - adjusted for header */
 .hero {
-  min-height: calc(100vh - 70px);
+  min-height: calc(100vh - 70px); /* 70px = header height (15px top padding + 40px logo + 15px bottom padding) */
   display: flex;
   align-items: center;
   padding: 40px 0;
