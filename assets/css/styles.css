@@ -84,13 +84,6 @@ body {
   line-height: 1.2;
 }
 
-.hero-text .subline {
-  font-size: 1.3rem;
-  color: #0066cc;
-  margin-bottom: 20px;
-  font-weight: 500;
-}
-
 .hero-text .intro-text {
   font-size: 1rem;
   color: #555;
@@ -140,10 +133,10 @@ body {
   border-top: 1px solid #e0e0e0;
 }
 
-/* Phone display - prominent */
+/* Phone display - prominent (must be larger than H1) */
 .phone-display {
   display: block;
-  font-size: 1.8rem;
+  font-size: 2.8rem;
   font-weight: 700;
   color: #0066cc;
   text-decoration: none;
@@ -261,6 +254,12 @@ footer p {
     font-size: 0.95rem;
   }
 
+  /* Reduce hero min-height on mobile to ensure content fits above fold */
+  .hero {
+    min-height: auto;
+    padding: 20px 0;
+  }
+
   .hero-content {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -274,10 +273,6 @@ footer p {
 
   .hero-text h1 {
     font-size: 2rem;
-  }
-
-  .hero-text .subline {
-    font-size: 1.1rem;
   }
 
   .hero-text .intro-text {
@@ -298,7 +293,7 @@ footer p {
   }
 
   .phone-display {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 12px;
   }
 
@@ -336,10 +331,6 @@ footer p {
     font-size: 1.6rem;
   }
 
-  .hero-text .subline {
-    font-size: 1rem;
-  }
-
   .hero-text .intro-text {
     font-size: 0.9rem;
   }
@@ -357,6 +348,6 @@ footer p {
   }
 
   .phone-display {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
   }
 }
