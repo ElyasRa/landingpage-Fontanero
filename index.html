@@ -38,7 +38,31 @@
         </div>
         
         <div class="hero-image">
-          <img src="/assets/images/fontanero-general.jpg" alt="Fontanero profesional en Barcelona" width="600" height="800">
+          <picture>
+            <source
+              type="image/webp"
+              srcset="/assets/images/hero/fontanero-hero-480.webp 480w,
+                      /assets/images/hero/fontanero-hero-600.webp 600w,
+                      /assets/images/hero/fontanero-hero-768.webp 768w,
+                      /assets/images/hero/fontanero-hero-1024.webp 1024w,
+                      /assets/images/hero/fontanero-hero-1400.webp 1400w"
+              sizes="(max-width: 768px) 100vw, 50vw">
+            <source
+              type="image/jpeg"
+              srcset="/assets/images/hero/fontanero-hero-480.jpg 480w,
+                      /assets/images/hero/fontanero-hero-600.jpg 600w,
+                      /assets/images/hero/fontanero-hero-768.jpg 768w,
+                      /assets/images/hero/fontanero-hero-1024.jpg 1024w,
+                      /assets/images/hero/fontanero-hero-1400.jpg 1400w"
+              sizes="(max-width: 768px) 100vw, 50vw">
+            <img src="/assets/images/hero/fontanero-hero-600.jpg"
+                 alt="Fontanero profesional en Barcelona"
+                 width="600"
+                 height="800"
+                 fetchpriority="high"
+                 loading="eager"
+                 decoding="async">
+          </picture>
         </div>
       </div>
     </div>
