@@ -9,7 +9,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #f8f9fa;
+  background-color: #e9ecef;
 }
 
 /* Container with max width */
@@ -19,13 +19,44 @@ body {
   padding: 0 20px;
 }
 
-/* Hero section - 100vh */
+/* Header */
+.header {
+  background-color: #0B5ED7;
+  padding: 15px 0;
+  color: white;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.header-phone {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+.header-phone:hover {
+  opacity: 0.9;
+}
+
+/* Hero section - adjusted for header */
 .hero {
-  min-height: 100vh;
+  min-height: calc(100vh - 70px);
   display: flex;
   align-items: center;
   padding: 40px 0;
-  background-color: #fff;
+  background-color: #e9ecef;
 }
 
 /* Two-column layout */
@@ -34,6 +65,10 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
+  background-color: #fff;
+  padding: 50px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Left column - text */
@@ -52,8 +87,15 @@ body {
 .hero-text .subline {
   font-size: 1.3rem;
   color: #0066cc;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-weight: 500;
+}
+
+.hero-text .intro-text {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.5;
 }
 
 .hero-text .phone-large {
@@ -72,7 +114,7 @@ body {
 /* Bullet points */
 .features {
   list-style: none;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .features li {
@@ -88,6 +130,14 @@ body {
   font-weight: bold;
   font-size: 1.5rem;
   margin-right: 15px;
+}
+
+.trust-line {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 30px;
+  padding-top: 10px;
+  border-top: 1px solid #e0e0e0;
 }
 
 /* CTA button */
@@ -157,9 +207,23 @@ footer p {
 
 /* Mobile responsive - stack layout */
 @media (max-width: 768px) {
+  .header .container {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .header-logo img {
+    height: 32px;
+  }
+
+  .header-phone {
+    font-size: 0.95rem;
+  }
+
   .hero-content {
     grid-template-columns: 1fr;
     gap: 40px;
+    padding: 40px 25px;
   }
 
   .hero-text {
@@ -175,6 +239,10 @@ footer p {
     font-size: 1.1rem;
   }
 
+  .hero-text .intro-text {
+    font-size: 0.95rem;
+  }
+
   .hero-text .phone-large {
     font-size: 1.6rem;
   }
@@ -182,6 +250,10 @@ footer p {
   .features li {
     font-size: 1rem;
     justify-content: center;
+  }
+
+  .trust-line {
+    font-size: 0.8rem;
   }
 
   .cta-button {
@@ -202,6 +274,18 @@ footer p {
 }
 
 @media (max-width: 480px) {
+  .header-logo img {
+    height: 28px;
+  }
+
+  .header-phone {
+    font-size: 0.85rem;
+  }
+
+  .hero-content {
+    padding: 30px 20px;
+  }
+
   .hero-text h1 {
     font-size: 1.6rem;
   }
@@ -210,11 +294,19 @@ footer p {
     font-size: 1rem;
   }
 
+  .hero-text .intro-text {
+    font-size: 0.9rem;
+  }
+
   .hero-text .phone-large {
     font-size: 1.4rem;
   }
 
   .features li {
     font-size: 0.95rem;
+  }
+
+  .trust-line {
+    font-size: 0.75rem;
   }
 }

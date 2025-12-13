@@ -28,12 +28,26 @@ This repository contains five conversion-focused landing pages:
 
 ## Configuration
 
+### Header and Logo
+
+All pages include a blue header bar with:
+- **Logo**: A professional SVG logo located at `/assets/images/logo.svg`
+- **Phone number**: Displayed in the top-right corner and linked to call via `tel:`
+
+To customize the logo:
+1. Replace `/assets/images/logo.svg` with your own logo
+2. Recommended dimensions: 200x50px (auto-scales on mobile)
+3. Use white/light colors for visibility against the blue (#0B5ED7) background
+
+The header is non-sticky to preserve the one-screen layout philosophy.
+
 ### Setting the Phone Number
 
-The phone number appears in two places on each page and needs to be updated:
+The phone number appears in three places on each page and needs to be updated:
 
-1. **In the CTA button** - Search for `tel:+346XXXXXXXX` in all HTML files
-2. **In the footer** - Search for `+34 6XX XXX XXX` in all HTML files
+1. **In the header** - Search for `tel:+346XXXXXXXX` and `+34 6XX XXX XXX` in the header section
+2. **In the CTA button** - Search for `tel:+346XXXXXXXX` in all HTML files
+3. **In the footer** - Search for `+34 6XX XXX XXX` in all HTML files
 
 **To update:**
 
