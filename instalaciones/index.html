@@ -38,7 +38,18 @@
         </div>
         
         <div class="hero-image">
-          <img src="/assets/images/instalaciones.jpg" alt="Instalaciones de fontanería en Barcelona">
+          <img src="/assets/images/instalaciones.jpg" 
+               srcset="/assets/images/instalaciones-480w.webp 480w,
+                       /assets/images/instalaciones-768w.webp 768w,
+                       /assets/images/instalaciones-1024w.webp 1024w,
+                       /assets/images/instalaciones-1400w.webp 1400w"
+               sizes="(max-width: 768px) 100vw, 50vw"
+               width="1024"
+               height="768"
+               alt="Instalaciones de fontanería en Barcelona"
+               loading="eager"
+               fetchpriority="high"
+               decoding="async">
         </div>
       </div>
     </div>

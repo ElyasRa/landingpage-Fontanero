@@ -40,7 +40,18 @@
         </div>
         
         <div class="hero-image">
-          <img src="/assets/images/fontanero-urgente.jpg" alt="Fontanero urgente 24 horas en Barcelona">
+          <img src="/assets/images/fontanero-urgente.jpg" 
+               srcset="/assets/images/fontanero-urgente-480w.webp 480w,
+                       /assets/images/fontanero-urgente-768w.webp 768w,
+                       /assets/images/fontanero-urgente-1024w.webp 1024w,
+                       /assets/images/fontanero-urgente-1400w.webp 1400w"
+               sizes="(max-width: 768px) 100vw, 50vw"
+               width="1024"
+               height="768"
+               alt="Fontanero urgente 24 horas en Barcelona"
+               loading="eager"
+               fetchpriority="high"
+               decoding="async">
         </div>
       </div>
     </div>

@@ -89,7 +89,7 @@ body {
 
 .hero-text .intro-text {
   font-size: 1rem;
-  color: #555;
+  color: #444;
   margin-bottom: 30px;
   line-height: 1.5;
 }
@@ -130,7 +130,7 @@ body {
 
 .trust-line {
   font-size: 0.85rem;
-  color: #666;
+  color: #555;
   margin-bottom: 25px;
   padding-top: 10px;
   border-top: 1px solid #e0e0e0;
@@ -151,10 +151,10 @@ body {
   color: #004a99;
 }
 
-/* CTA button */
+/* CTA button - improved contrast */
 .cta-button {
   display: inline-block;
-  background-color: #28a745;
+  background-color: #218838;
   color: white;
   padding: 18px 40px;
   font-size: 1.3rem;
@@ -162,13 +162,13 @@ body {
   text-decoration: none;
   border-radius: 8px;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+  box-shadow: 0 4px 12px rgba(33, 136, 56, 0.3);
 }
 
 .cta-button:hover {
-  background-color: #218838;
+  background-color: #1e7e34;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(40, 167, 69, 0.4);
+  box-shadow: 0 6px 16px rgba(33, 136, 56, 0.4);
 }
 
 /* Right column - image */
@@ -188,6 +188,8 @@ body {
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   display: block;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
 }
 
 /* Hide broken images gracefully - JS handles the main fallback */
@@ -444,12 +446,47 @@ footer p {
   .hero-image {
     order: -1;
     min-height: 200px;
-    max-height: 200px;
+    max-height: 250px;
+    overflow: hidden;
+  }
+  
+  .hero-image img {
+    height: 100%;
+    object-fit: cover;
   }
 
   footer .footer-links {
     flex-direction: column;
     gap: 15px;
+  }
+}
+
+/* Tablet responsive - optimized layout */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-content {
+    gap: 40px;
+    padding: 40px 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .phone-display {
+    font-size: 2.4rem;
+  }
+
+  .cta-button {
+    padding: 16px 35px;
+    font-size: 1.2rem;
+  }
+
+  .hero-image {
+    min-height: 280px;
+  }
+  
+  .hero-image img {
+    object-fit: cover;
   }
 }
 

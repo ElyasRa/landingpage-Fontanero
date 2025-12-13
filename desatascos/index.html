@@ -38,7 +38,18 @@
         </div>
         
         <div class="hero-image">
-          <img src="/assets/images/desatascos.jpg" alt="Servicio de desatascos en Barcelona">
+          <img src="/assets/images/desatascos.jpg" 
+               srcset="/assets/images/desatascos-480w.webp 480w,
+                       /assets/images/desatascos-768w.webp 768w,
+                       /assets/images/desatascos-1024w.webp 1024w,
+                       /assets/images/desatascos-1400w.webp 1400w"
+               sizes="(max-width: 768px) 100vw, 50vw"
+               width="1024"
+               height="768"
+               alt="Servicio de desatascos en Barcelona"
+               loading="eager"
+               fetchpriority="high"
+               decoding="async">
         </div>
       </div>
     </div>

@@ -38,7 +38,18 @@
         </div>
         
         <div class="hero-image">
-          <img src="/assets/images/fugas-agua.jpg" alt="Reparación de fugas de agua en Barcelona">
+          <img src="/assets/images/fugas-agua.jpg" 
+               srcset="/assets/images/fugas-agua-480w.webp 480w,
+                       /assets/images/fugas-agua-768w.webp 768w,
+                       /assets/images/fugas-agua-1024w.webp 1024w,
+                       /assets/images/fugas-agua-1400w.webp 1400w"
+               sizes="(max-width: 768px) 100vw, 50vw"
+               width="1024"
+               height="768"
+               alt="Reparación de fugas de agua en Barcelona"
+               loading="eager"
+               fetchpriority="high"
+               decoding="async">
         </div>
       </div>
     </div>
