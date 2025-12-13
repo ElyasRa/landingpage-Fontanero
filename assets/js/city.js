@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Also check if image has no src or empty file
-    if (!img.src || img.complete && img.naturalHeight === 0) {
+    if (!img.src || (img.complete && img.naturalHeight === 0)) {
       img.style.display = 'none';
       applyImageFallback(img.closest('.hero-image'));
     }

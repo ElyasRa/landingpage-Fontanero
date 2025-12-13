@@ -194,9 +194,8 @@ body {
   display: block;
 }
 
-/* Hide broken images gracefully */
-.hero-image img[src=""],
-.hero-image img:not([src*="http"]) {
+/* Hide broken images gracefully - JS handles the main fallback */
+.hero-image img[src=""] {
   opacity: 0;
   width: 0;
   height: 0;
