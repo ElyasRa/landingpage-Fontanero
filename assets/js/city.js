@@ -85,6 +85,12 @@ function replaceCityName() {
   elements.forEach(element => {
     element.textContent = cityName;
   });
+  
+  // Replace city mention in intro text (sanitized - only from allowed list)
+  const cityMentionElements = document.querySelectorAll('.city-mention');
+  cityMentionElements.forEach(element => {
+    element.textContent = cityName;
+  });
 }
 
 // Run on page load
