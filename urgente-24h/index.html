@@ -4,6 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fontanero urgente 24h en Barcelona y alrededores - Atención inmediata</title>
+<style>
+/* CRITICAL_URGENTE_CSS */
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#eef2f6;}
+.topbar{background:#0b5ed7;color:#fff;}
+.hero{padding:24px;}
+.hero-card{background:#fff;border-radius:16px;box-shadow:0 18px 45px rgba(0,0,0,.12);overflow:hidden;}
+.hero-content{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;padding:28px;}
+.hero-image img{display:block;width:100%;height:520px;object-fit:cover;border-radius:14px;}
+@media(max-width:900px){.hero-content{grid-template-columns:1fr;}.hero-image img{height:260px;}}
+</style>
+<link rel="preload" as="image" href="/assets/images/urgente-hero-v2-800.webp" type="image/webp" fetchpriority="high">
   <meta name="description" content="Servicio de fontanería urgente 24 horas en Barcelona y alrededores. Llegamos rápido para fugas de agua y averías urgentes.">
   <link rel="stylesheet" href="/assets/css/styles.css">
   <style>
@@ -20,7 +31,7 @@
   <header class="header">
     <div class="container">
       <div class="header-logo">
-        <img src="/assets/images/logo.svg" alt="Fontaneros24 - Servicio de fontanería profesional">
+        <img src="/assets/images/logo.svg" width="140" height="28" alt="Fontaneros24 - Servicio de fontanería profesional">
       </div>
       <a href="tel:+346XXXXXXXX" class="header-phone">+34 6XX XXX XXX</a>
     </div>
@@ -49,13 +60,17 @@
         </div>
         
         <div class="hero-image">
-          <img src="/assets/images/images.jpg"
+          <picture>
+  <source type="image/webp" srcset="/assets/images/urgente-hero-v2-800.webp 800w, /assets/images/urgente-hero-v2.webp 1400w" sizes="(max-width: 900px) 100vw, 520px">
+  <img src="/assets/images/urgente-hero-v2.jpg"
                alt="Fontanero urgente 24 horas en Barcelona"
                width="600"
                height="800"
                fetchpriority="high"
                loading="eager"
                decoding="async">
+</picture>
+
         </div>
       </div>
     </div>
@@ -72,5 +87,6 @@
   </footer>
   
   <script src="/assets/js/city.js"></script>
+<script>/* LOAD_URGENTE_STYLES_DEFERRED */(function(){var l=document.createElement("link");l.rel="stylesheet";l.href="/assets/css/styles.css?v=1";document.head.appendChild(l);})();</script>
 </body>
 </html>
