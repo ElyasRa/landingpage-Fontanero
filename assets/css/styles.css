@@ -84,13 +84,6 @@ body {
   line-height: 1.2;
 }
 
-.hero-text .subline {
-  font-size: 1.3rem;
-  color: #0066cc;
-  margin-bottom: 20px;
-  font-weight: 500;
-}
-
 .hero-text .intro-text {
   font-size: 1rem;
   color: #555;
@@ -140,10 +133,10 @@ body {
   border-top: 1px solid #e0e0e0;
 }
 
-/* Phone display - prominent */
+/* Phone display - prominent (must be larger than H1) */
 .phone-display {
   display: block;
-  font-size: 1.8rem;
+  font-size: 2.8rem;
   font-weight: 700;
   color: #0066cc;
   text-decoration: none;
@@ -261,56 +254,76 @@ footer p {
     font-size: 0.95rem;
   }
 
+  /* Reduce hero min-height on mobile to ensure content fits above fold */
+  .hero {
+    min-height: auto;
+    padding: 20px 0;
+  }
+
   .hero-content {
     grid-template-columns: 1fr;
-    gap: 40px;
-    padding: 40px 25px;
+    gap: 20px;
+    padding: 25px 20px;
   }
 
   .hero-text {
     padding-right: 0;
     text-align: center;
+    display: flex;
+    flex-direction: column;
   }
 
+  /* Reorder elements on mobile to prioritize phone */
   .hero-text h1 {
     font-size: 2rem;
-  }
-
-  .hero-text .subline {
-    font-size: 1.1rem;
+    margin-bottom: 12px;
+    order: 1;
   }
 
   .hero-text .intro-text {
     font-size: 0.95rem;
+    margin-bottom: 15px;
+    order: 2;
   }
 
   .hero-text .phone-large {
     font-size: 1.6rem;
   }
 
-  .features li {
-    font-size: 1rem;
-    justify-content: center;
-  }
-
-  .trust-line {
-    font-size: 0.8rem;
-  }
-
   .phone-display {
-    font-size: 1.5rem;
-    margin-bottom: 12px;
+    order: 3;
+    font-size: 2rem;
+    margin-bottom: 10px;
   }
 
   .cta-button {
+    order: 4;
     width: 100%;
     text-align: center;
     padding: 16px 30px;
     font-size: 1.2rem;
   }
 
+  .features {
+    margin-bottom: 20px;
+    order: 5;
+  }
+
+  .features li {
+    font-size: 1rem;
+    justify-content: center;
+    padding: 8px 0;
+  }
+
+  .trust-line {
+    order: 6;
+    font-size: 0.8rem;
+  }
+
   .hero-image {
     order: -1;
+    min-height: 200px;
+    max-height: 200px;
   }
 
   footer .footer-links {
@@ -336,10 +349,6 @@ footer p {
     font-size: 1.6rem;
   }
 
-  .hero-text .subline {
-    font-size: 1rem;
-  }
-
   .hero-text .intro-text {
     font-size: 0.9rem;
   }
@@ -357,6 +366,6 @@ footer p {
   }
 
   .phone-display {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
   }
 }
