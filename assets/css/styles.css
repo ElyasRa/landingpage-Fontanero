@@ -189,9 +189,11 @@ body {
   height: auto;
   max-height: 500px;
   object-fit: cover;
+  object-position: center 30%;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   display: block;
+  aspect-ratio: 3 / 4;
 }
 
 /* Hide broken images gracefully - JS handles the main fallback */
@@ -399,10 +401,14 @@ footer p {
 
   .hero-image {
     min-height: 280px;
+    padding: 12px;
   }
 
   .hero-image img {
     max-height: 400px;
+    object-fit: cover;
+    object-position: center 25%;
+    aspect-ratio: 3 / 4;
   }
 }
 
@@ -502,13 +508,17 @@ footer p {
 
   .hero-image {
     order: -1;
-    min-height: 180px;
-    max-height: 180px;
+    min-height: 280px;
+    max-height: 280px;
+    padding: 12px;
   }
 
   .hero-image img {
-    max-height: 180px;
+    width: 100%;
+    height: 280px;
     object-fit: cover;
+    object-position: center 20%;
+    aspect-ratio: 4 / 3;
   }
 
   footer .footer-links {
@@ -577,12 +587,17 @@ footer p {
   }
 
   .hero-image {
-    min-height: 160px;
-    max-height: 160px;
+    min-height: 240px;
+    max-height: 240px;
+    padding: 10px;
   }
 
   .hero-image img {
-    max-height: 160px;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    object-position: center 20%;
+    aspect-ratio: 4 / 3;
   }
 }
 
@@ -642,11 +657,16 @@ footer p {
   }
 
   .hero-image {
-    min-height: 140px;
-    max-height: 140px;
+    min-height: 200px;
+    max-height: 200px;
+    padding: 8px;
   }
 
   .hero-image img {
-    max-height: 140px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center 20%;
+    aspect-ratio: 4 / 3;
   }
 }
