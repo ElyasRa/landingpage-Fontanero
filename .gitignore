@@ -1,0 +1,25 @@
+# env / secrets
+.env
+*.pem
+*.key
+*.crt
+*.pfx
+
+# backups
+*.bak
+*.bak.*
+*.old
+
+# logs
+*.log
+
+# temp/cache
+tmp/
+.cache/
+*.tmp
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
