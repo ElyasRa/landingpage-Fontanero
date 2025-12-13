@@ -292,11 +292,16 @@ footer p {
 
   .phone-display {
     order: 3;
+    font-size: 2rem;
     margin-bottom: 10px;
   }
 
   .cta-button {
     order: 4;
+    width: 100%;
+    text-align: center;
+    padding: 16px 30px;
+    font-size: 1.2rem;
   }
 
   .features {
@@ -312,22 +317,7 @@ footer p {
 
   .trust-line {
     order: 6;
-  }
-
-  .trust-line {
     font-size: 0.8rem;
-  }
-
-  .phone-display {
-    font-size: 2rem;
-    margin-bottom: 12px;
-  }
-
-  .cta-button {
-    width: 100%;
-    text-align: center;
-    padding: 16px 30px;
-    font-size: 1.2rem;
   }
 
   .hero-image {
