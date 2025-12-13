@@ -89,3 +89,28 @@ function replaceCityName() {
 
 // Run on page load
 document.addEventListener('DOMContentLoaded', replaceCityName);
+
+// Handle broken images gracefully
+document.addEventListener('DOMContentLoaded', function() {
+  const images = document.querySelectorAll('.hero-image img');
+  
+  function applyImageFallback(container) {
+    if (container) {
+      container.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+      container.style.opacity = '0.1';
+    }
+  }
+  
+  images.forEach(img => {
+    img.addEventListener('error', function() {
+      this.style.display = 'none';
+      applyImageFallback(this.closest('.hero-image'));
+    });
+    
+    // Also check if image has no src or empty file
+    if (!img.src || (img.complete && img.naturalHeight === 0)) {
+      img.style.display = 'none';
+      applyImageFallback(img.closest('.hero-image'));
+    }
+  });
+});
