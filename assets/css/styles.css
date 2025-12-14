@@ -692,3 +692,243 @@ footer p {
     object-position: center;
   }
 }
+
+/* Testimonials Section */
+.testimonials {
+  background: #f8f9fa;
+  padding: 50px 0 60px;
+  overflow: hidden;
+}
+
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.testimonials-label {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #0B5ED7;
+  background: rgba(11, 94, 215, 0.1);
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.testimonials-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.testimonials-marquee {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.testimonials-track {
+  display: flex;
+  gap: 20px;
+  will-change: transform;
+}
+
+/* Desktop: Auto-scrolling animation */
+@media (min-width: 769px) {
+  .testimonials-track {
+    animation: scroll-left 40s linear infinite;
+  }
+  
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Pause animation on hover */
+  .testimonials-marquee:hover .testimonials-track {
+    animation-play-state: paused;
+  }
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .testimonials-track {
+    animation: none !important;
+  }
+  
+  .testimonials-marquee {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  @media (min-width: 769px) {
+    .testimonials-marquee {
+      padding: 20px 20px;
+    }
+  }
+  
+  .testimonial-card {
+    scroll-snap-align: start;
+  }
+}
+
+/* Testimonial Card */
+.testimonial-card {
+  flex: 0 0 auto;
+  width: 380px;
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e9ecef;
+  display: flex;
+  gap: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-avatar {
+  flex-shrink: 0;
+}
+
+.avatar-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.testimonial-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.testimonial-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
+.testimonial-author {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.testimonial-author strong {
+  font-size: 1rem;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.testimonial-handle {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+.testimonial-rating {
+  display: flex;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.testimonial-rating .star {
+  color: #ffc107;
+  font-size: 1rem;
+}
+
+.testimonial-text {
+  font-size: 0.95rem;
+  color: #495057;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Mobile: Horizontal scroll with snap */
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 40px 0 50px;
+  }
+  
+  .testimonials-header {
+    margin-bottom: 30px;
+    padding: 0 20px;
+  }
+  
+  .testimonials-title {
+    font-size: 1.6rem;
+  }
+  
+  .testimonials-marquee {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 10px 0 10px 20px;
+  }
+  
+  .testimonials-track {
+    animation: none !important;
+    padding-right: 20px;
+  }
+  
+  .testimonial-card {
+    width: 320px;
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials {
+    padding: 30px 0 40px;
+  }
+  
+  .testimonials-title {
+    font-size: 1.4rem;
+  }
+  
+  .testimonial-card {
+    width: 280px;
+    padding: 20px;
+  }
+  
+  .avatar-circle {
+    width: 44px;
+    height: 44px;
+    font-size: 0.9rem;
+  }
+  
+  .testimonial-author strong {
+    font-size: 0.95rem;
+  }
+  
+  .testimonial-handle {
+    font-size: 0.8rem;
+  }
+  
+  .testimonial-text {
+    font-size: 0.9rem;
+  }
+}
