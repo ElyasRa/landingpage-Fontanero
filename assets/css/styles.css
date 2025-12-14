@@ -693,11 +693,14 @@ footer p {
   }
 }
 
-/* Testimonials Section */
+/* Testimonials Section - Carousel Implementation */
 .testimonials {
   background: #f8f9fa;
   padding: 50px 0 60px;
-  overflow: hidden;
+}
+
+.testimonials .container {
+  max-width: 1100px;
 }
 
 .testimonials-header {
@@ -725,67 +728,32 @@ footer p {
   margin: 0;
 }
 
-.testimonials-marquee {
+/* Carousel Container */
+.testimonials-carousel {
   position: relative;
   overflow: hidden;
   width: 100%;
-  padding: 20px 0;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .testimonials-track {
   display: flex;
   gap: 20px;
+  transition: transform 0.5s ease-in-out;
   will-change: transform;
 }
 
-/* Desktop: Auto-scrolling animation */
+/* Desktop: Show 3 cards */
 @media (min-width: 769px) {
-  .testimonials-track {
-    animation: scroll-left 40s linear infinite;
-  }
-  
-  @keyframes scroll-left {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-  
-  /* Pause animation on hover */
-  .testimonials-marquee:hover .testimonials-track {
-    animation-play-state: paused;
-  }
-}
-
-/* Respect prefers-reduced-motion */
-@media (prefers-reduced-motion: reduce) {
-  .testimonials-track {
-    animation: none !important;
-  }
-  
-  .testimonials-marquee {
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-  }
-  
-  @media (min-width: 769px) {
-    .testimonials-marquee {
-      padding: 20px 20px;
-    }
-  }
-  
   .testimonial-card {
-    scroll-snap-align: start;
+    flex: 0 0 calc((100% - 40px) / 3);
+    min-width: 0;
   }
 }
 
 /* Testimonial Card */
 .testimonial-card {
-  flex: 0 0 auto;
-  width: 380px;
   background: white;
   border-radius: 12px;
   padding: 24px;
@@ -867,6 +835,13 @@ footer p {
   margin: 0;
 }
 
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .testimonials-track {
+    transition: none !important;
+  }
+}
+
 /* Mobile: Horizontal scroll with snap */
 @media (max-width: 768px) {
   .testimonials {
@@ -882,7 +857,7 @@ footer p {
     font-size: 1.6rem;
   }
   
-  .testimonials-marquee {
+  .testimonials-carousel {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
@@ -890,11 +865,12 @@ footer p {
   }
   
   .testimonials-track {
-    animation: none !important;
+    transition: none;
     padding-right: 20px;
   }
   
   .testimonial-card {
+    flex: 0 0 auto;
     width: 320px;
     scroll-snap-align: start;
   }
