@@ -19,9 +19,9 @@
     let autoplayInterval = null;
     let isPaused = false;
 
-    // Only initialize carousel on desktop (>768px)
+    // Only initialize carousel on desktop (>900px)
     function isDesktop() {
-      return window.innerWidth > 768;
+      return window.innerWidth > 900;
     }
 
     // Calculate how many cards to show at once

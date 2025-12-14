@@ -745,7 +745,7 @@ footer p {
 }
 
 /* Desktop: Show 3 cards */
-@media (min-width: 769px) {
+@media (min-width: 901px) {
   .testimonial-card {
     flex: 0 0 calc((100% - 40px) / 3);
     min-width: 0;
@@ -843,7 +843,7 @@ footer p {
 }
 
 /* Mobile: Horizontal scroll with snap */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .testimonials {
     padding: 40px 0 50px;
   }
@@ -871,7 +871,8 @@ footer p {
   
   .testimonial-card {
     flex: 0 0 auto;
-    width: 320px;
+    width: 85vw;
+    max-width: 400px;
     scroll-snap-align: start;
   }
 }
@@ -886,7 +887,8 @@ footer p {
   }
   
   .testimonial-card {
-    width: 280px;
+    width: 85vw;
+    max-width: 320px;
     padding: 20px;
   }
   
