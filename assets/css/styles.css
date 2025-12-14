@@ -872,7 +872,7 @@ footer p {
   .testimonial-card {
     flex: 0 0 auto;
     width: 85vw;
-    max-width: 400px;
+    max-width: 500px;
     scroll-snap-align: start;
   }
 }
