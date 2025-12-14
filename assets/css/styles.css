@@ -1020,3 +1020,81 @@ footer p {
     font-size: 0.9rem;
   }
 }
+
+/* ========================================
+   MOBILE HEADER IMPROVEMENTS - FINAL OVERRIDE
+   ======================================== */
+
+/* Mobile devices (≤768px) - Improved header layout */
+@media (max-width: 768px) {
+  /* Make navigation horizontally scrollable with no wrapping */
+  .header-nav {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    /* Hide scrollbar for cleaner appearance */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+  
+  .header-nav::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+  
+  .header-nav ul {
+    flex-wrap: nowrap !important;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 0 5px;
+  }
+  
+  .header-nav a {
+    font-size: 0.9rem !important;
+    padding: 8px 12px;
+    display: inline-block;
+  }
+  
+  /* Improved phone number and tagline readability */
+  .header-phone {
+    font-size: 1.15rem !important;
+    font-weight: 700;
+  }
+  
+  .header-tagline {
+    font-size: 0.8rem !important;
+  }
+  
+  /* Better spacing for header container */
+  .header .container {
+    gap: 15px;
+  }
+  
+  .header-logo img {
+    height: 32px !important;
+  }
+}
+
+/* Very small mobile devices (≤480px) - Further refinements */
+@media (max-width: 480px) {
+  .header-nav ul {
+    gap: 18px;
+  }
+  
+  .header-nav a {
+    font-size: 0.85rem !important;
+    padding: 6px 10px;
+  }
+  
+  .header-phone {
+    font-size: 1.05rem !important;
+  }
+  
+  .header-tagline {
+    font-size: 0.75rem !important;
+  }
+  
+  .header-logo img {
+    height: 28px !important;
+  }
+}
